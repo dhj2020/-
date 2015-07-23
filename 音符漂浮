@@ -1,5 +1,3 @@
-//author by J_un618
-
 $(function(){
 	
 	//自定义音符漂浮插件
