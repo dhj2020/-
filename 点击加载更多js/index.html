@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<title>育才香港移动页面</title>
+<link rel="stylesheet" type="text/css" href="css/mb.css">
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+//判断手机系统自适应
+(function(){
+	var phoneWidth = parseInt(window.screen.width),
+		phoneScale = phoneWidth/640,
+		ua = navigator.userAgent;
+	if (/Android (\d+\.\d+)/.test(ua)){
+		var version = parseFloat(RegExp.$1);
+		if(version > 2.3){
+			document.write('<meta name="viewport" content="width=640, minimum-scale='+phoneScale+', maximum-scale='+phoneScale+', target-densitydpi=device-dpi">');
+		}else{
+			document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+		}		
+	} else {
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	}
+})();
+</script>
+</head>
+
+<body>
+<div id="container">
+	<nav></nav>
+    <div class="slidebar">
+    	<ul>
+        	<li>首 頁</li>
+            <li>最新產品</li>
+            <li>幼稚園傢俬系列</li>
+            <li>幼稚園童車系列</li>
+            <li>學校課桌椅系列</li>
+            <li>兒童遊樂玩具系列</li>
+            <li>辦公傢俬系列</li>
+            <li>特價促銷</li>
+            <li>微信公眾號</li>
+            <li>FACEBOOK</li>
+            <li style="font-size:22px;">電話：2492 8910   3590 9055</li>
+            <li style="font-size:22px;">電郵：info@dehao.com.hk</li>
+        </ul>
+    </div>
+  	<header>
+    	<div class="icon1"><img src="images/icon1.png"/></div>
+        <div class="icon2"><img src="images/icon2.png"/></div>
+        <div class="icon3"><img src="images/icon3.png"/></div>
+        <div class="icon4"><img src="images/icon4.png"/></div>
+        <div class="icon5"><img src="images/icon5.png"/></div>
+    </header>
+ 	<div class="banner">
+    	<ul class="swiper-wrapper">
+        	<li class="swiper-slide"><img src="images/banner01.jpg"/></li>
+            <li class="swiper-slide"><img src="images/banner02.jpg"/></li>
+            <li class="swiper-slide"><img src="images/banner03.jpg"/></li>
+            <li class="swiper-slide"><img src="images/banner04.jpg"/></li>
+        </ul>
+        <div class="swiper-pagination"></div>
+    </div>
+    <h1><span style="float:left"><img src="images/cx.png"/></span><span style="float:left">特價促銷</span></h1>
+  <div class="tj">     
+        <div class="clist">
+            <ul>
+                <li><img src="images/d1.png"/><p>xx椅子</p></li>
+                <li><img src="images/d1.png"/><p>xx椅子</p></li>
+                <li><img src="images/d1.png"/><p>xx椅子</p></li>
+            </ul>
+        </div>
+    </div>
+    <div class="morecx">更多促銷</div>
+    <h1><span style="float:left"><img src="images/new.png"/></span><span style="float:left">最新產品</span></h1>
+    <div class="products">
+    	<ul>
+        	<li><img src="images/d1.png"/></li>
+            <li><img src="images/d2.png"/></li>
+            <li><img src="images/d2.png"/></li>
+            <li><img src="images/d2.png"/></li>
+            <li><img src="images/d2.png"/></li>
+            <li><img src="images/d2.png"/></li>
+            <li><img src="images/d2.png"/></li>
+            <li><img src="images/d2.png"/></li>
+            <li><img src="images/d2.png"/></li>
+            <li><img src="images/d2.png"/></li>
+            <li><img src="images/d2.png"/></li>
+        </ul>
+    </div>
+    <h1 class="more" style="text-align:center">加載更多</h1>
+    <footer>
+    	<div class="facebook"><a href="https://www.facebook.com/dehaoyucai"><img src="images/iconf.png" /></a></div>
+        <div class="weixin"><a href="https://www.facebook.com/dehaoyucai"><img src="images/iconw.png" /></a></div>
+        <div class="phone"><a href="tel:18898580320"><img src="images/iconp.png" /></a></div>
+        <div class="wx"><img src="images/wx.png"/></div>
+        <div class="contact">
+        	<ul class="listc">
+            	<li>2492 8910  3590 9055</li>
+                <li>info@dehao.com.hk</li>
+                <li>2492 8901</li>
+                <li>新界荃灣青山道491-501號嘉力工業中心B座9樓20室</li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<script src="js/swiper.min.js"></script>
+<script>
+$(function(){
+	$("nav").on("click",function(){
+		$(".slidebar").slideToggle(400)	
+	})
+	var _li = $("<li></li>")
+	$(".products li").after(_li)
+	$(".products li:last-child").remove()
+	
+	//自定义加载函数	
+	function getMore(elem,n,clkElem,tips){
+		var _leg = $(elem).length
+		
+		//每次显示产品的个数
+		var listNum = n  
+		
+		//分成num次显示
+		var num = Math.ceil(_leg/listNum)
+		  
+		//页面默认显示12个产品
+		$(elem).slice(0,listNum).show()
+		
+		//定义每次展示图片函数
+		function showMore(index){
+			for (i=0;i<index*listNum;i++){
+				$(elem).eq(i).show()
+			}
+		}
+		
+		//因为第一次已默认显示，所以从第二次开始加载
+		var j = 2
+		$(clkElem).on("click",function(){
+			showMore(j)			
+			if(j==num){
+				$(clkElem).html(tips)
+			}
+			j++
+		})	
+	}
+	//调用加载函数
+	getMore(".products li",12,".more","產品已顯示完畢。。。")
+		
+	
+})
+
+
+var swiper = new Swiper('.banner', {
+	autoplay: 3000,
+	pagination : '.swiper-pagination',
+});
+</script>
+</body>
+</html>

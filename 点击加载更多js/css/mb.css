@@ -1,0 +1,248 @@
+@charset "utf-8";
+/* CSS reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers*/
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section{display: block;}
+body{line-height: 1;}
+: focus{outline: 1;}
+ol, ul{list-style: none;}
+caption,th{text-align: left;}
+blockquote, q{quotes: none;}
+blockquote: before, blockquote: after,q: before, q: after{content: '';content: none;}
+q: before,q: after{content: '';}
+abbr,acronym{border: 0;font-variant: normal;}
+img{border: 0;display: block}
+input, select{vertical-align: middle;}
+table{border-collapse: collapse;border-spacing: 0;}
+hr{display: block;height: 1px;border: 0;border-top: 1px solid #cccccc;margin: 1em 0;padding: 0;}
+/* CSS reset end*/
+body
+{
+	font-size:12px;
+	font-family:"Microsoft Yahei","黑体";
+}
+a{text-decoration:none;}
+.clearfix{clear:both}
+
+#container{ height:100%; width:640px; margin:0 auto; position:relative}
+nav{
+	position:absolute;
+	width:31px;
+	height:23px;
+	top:20px;
+	left:20px;
+	z-index:100;
+	background:url(../images/navbg.png)
+}
+.slidebar{
+	width:390px;
+	position:absolute;
+	left:0;
+	top:60px;
+	z-index:100;
+	display:none;
+	background:rgba(11,26,40,0.8) url(../images/bg.png) no-repeat 0 0;
+}
+.slidebar li{
+	width: 100%;
+	height: 68px;
+	line-height: 70px;
+	display: block;
+	color:#fff;
+	text-indent:75px;
+	font-size:25px;
+	border-bottom: solid 1px rgba(255,255,255,0.5)
+}
+header{
+	width:100%;
+	height:392px;
+	position:relative;
+	background:url(../images/headerbg.png) no-repeat center 0;
+}
+header .icon1
+{
+	position: absolute;
+	left: 42px;
+	top: 220px;
+}
+header .icon2
+{
+	position: absolute;
+	left: 151px;
+	top: 147px;
+}
+header .icon3
+{
+	position: absolute;
+	left: 284px;
+	top: 123px;
+}
+header .icon4
+{
+	position: absolute;
+	left: 413px;
+	top: 147px;
+}
+header .icon5
+{
+	position: absolute;
+	left: 533px;
+	top: 221px;
+}
+.banner{
+	width:640px;
+	height:260px;
+	overflow:hidden;
+	position:relative;
+}
+.banner li
+{
+	width:640px;
+	height:260px;
+	background:rgba(207,200,201,0.5);
+	float:left
+}
+.tj{
+	width:100%;
+	height:210px;
+}		
+h1
+{
+	width:94%;
+	height:30px;
+	padding:30px 3%;
+	font-size:24px;
+	line-height:30px;
+	display:block
+}
+h1 span
+{
+	margin:0 5px 0 0;
+	line-height:34px;
+}
+.tj .clist
+{
+	width:100%;
+	height:150px;
+}
+.tj .clist li
+{
+	width:180px;
+	float:left;
+	margin:0 16px;
+}	
+.tj .clist li img
+{
+	width:180px;
+	height:150px;
+	box-shadow:5px 5px 5px rgba(179,172,172,1.00)
+}
+.tj .clist li p{
+	line-height:45px;
+	text-align:center;
+	font-size:20px;
+}
+.morecx{
+	width:100%;
+	height:55px;
+	font-size:24px;
+	text-align:center;
+	line-height:55px;
+	color:hsla(0,0%,100%,1.00);
+	background:#02859e
+}
+.products
+{
+	padding:0 30px;
+	height:auto;
+	overflow:hidden
+}
+.products li
+{
+	float:left;
+	width:193px;
+	height:196px;
+	background:#afdfcc;
+	display:none
+}
+.products li img{
+	width:193px;
+	height:196px;
+	box-shadow: 0 0 10px #5A5858;
+	-webkit-box-shadow: 0 0 10px #5A5858;
+}
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: .2;
+}
+footer{
+	height:200px;
+	width:100%;
+	background:#000 url(../images/fbg.png) no-repeat center 0;
+	position:relative;
+	color:#FFF
+}
+footer .facebook
+{
+	position: absolute;
+	right: 170px;
+	top: 13px;
+}
+footer .weixin
+{
+	position: absolute;
+	right: 100px;
+	top: 13px;
+}
+footer .phone
+{
+	position: absolute;
+	right: 29px;
+	top: 13px;
+}
+footer .wx
+{
+	position: absolute;
+	right: 29px;
+	top: 89px;
+}
+footer .contact
+{
+	position: absolute;
+	left: 9px;
+	top: 85px;
+	width: 460px;
+	height: 104px;
+	background: url(../images/contactbg.png) no-repeat center 0;
+}
+footer .contact .listc
+{
+	margin:0 0 0 90px;
+}
+.contact .listc li
+{
+	width: 400px;
+	font-size: 15px;
+	margin-bottom:9px;
+}
+footer .facebook a,footer .weixin a,footer .phone a{
+	width:54px;
+	height:54px;
+	display:block
+}
